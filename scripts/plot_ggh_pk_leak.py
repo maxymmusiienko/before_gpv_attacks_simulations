@@ -18,9 +18,9 @@ poly_corners = np.array([v1, v2, v3, v4])
 
 fig, ax = plt.subplots(figsize=(8, 8))
 
-ax.scatter(errors[:, 0], errors[:, 1], s=4, alpha=0.25, color="crimson", label="Вектори помилок $e$")
+ax.scatter(errors[:, 0], errors[:, 1], s=4, alpha=0.25, color="crimson", label="Error vectors $e$")
 
-parallelogram = Polygon(poly_corners, closed=True, fill=False, edgecolor="black", linewidth=2, linestyle="--", label="Межі $\mathcal{P}_{1/2}(B_{sk})$")
+parallelogram = Polygon(poly_corners, closed=True, fill=False, edgecolor="black", linewidth=2, linestyle="--", label="Range $\mathcal{P}_{1/2}(B_{sk})$")
 ax.add_patch(parallelogram)
 
 ax.quiver(0, 0, b1[0], b1[1], angles='xy', scale_units='xy', scale=1, color='blue', label="$b_1$")
